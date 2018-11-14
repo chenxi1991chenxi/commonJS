@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js</title>
+    <script src="../js/vue.js"></script>
+    <script src="../js/filters.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div v-html="msg"></div>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el:'#app',
+            data: {
+                msg:'<h1>title一</h1><p>vdsvmsjfjgvprepom</p><span style="color:red">nihaowa</span><img src="../img/img1.png"/>'
+            },
+            created () {
+                this.msg = filtersHtml(this.msg, '1')
+            },
+            methods: {
+                
+            }
+        })
+    </script>
+</body>
+</html>
